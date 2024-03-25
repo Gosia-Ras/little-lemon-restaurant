@@ -1,0 +1,12 @@
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  padding: 0 100px;
+}
+
+@media (max-width: 992px) {
+  footer {
+    grid-template-columns: repeat(1, auto);
+    padding: 15px;
+  }
+}
