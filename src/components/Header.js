@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Nav from "./Nav";
 import logo from "../assets/Logo.svg";
 import hamburger from "../assets/hamburger_menu.svg";
-import "./Header.css";
+import "../styles/Header.css";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);

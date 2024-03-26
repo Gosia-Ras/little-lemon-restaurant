@@ -1,0 +1,11 @@
+.testimonials_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+
+@media (max-width: 767px) {
+  .testimonials_container {
+    grid-template-columns: auto;
+  }
+}
