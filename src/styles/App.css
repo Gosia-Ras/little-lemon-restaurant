@@ -1,5 +1,15 @@
+:root {
+  --green-main: #495e57;
+  --green-accent: #48742c;
+  --yellow: #f4ce14;
+  --yellow-accent: #dab811;
+  --grey: #edefee;
+  --black: #141414;
+}
+
 * {
   font-family: "Markazi Text", "Karla", serif;
+  color: var(--black);
 }
 
 label,

@@ -1,5 +1,41 @@
-.dishes {
+section.menu .dishes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
+}
+
+section.menu .dishes div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+section.menu .dishes img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+section.menu .dishes h3,
+section.menu .dishes p {
+  margin: 0;
+  padding: 10px;
+}
+
+section.menu .dishes div > div {
+  flex-grow: 1;
+}
+
+@media (max-width: 992px) {
+  section.menu .dishes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  section.menu .dishes {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

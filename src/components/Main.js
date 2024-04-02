@@ -1,16 +1,8 @@
+import React from "react";
 import "../styles/Main.css";
-import Testimonials from "./Testimonials";
-import Hero from "./Hero";
-import Menu from "./Menu";
 
-function Main() {
-  return (
-    <main>
-      <Hero />
-      <Menu />
-      <Testimonials />
-    </main>
-  );
+function Main({ children }) {
+  return <main>{children}</main>;
 }
 
 export default Main;
