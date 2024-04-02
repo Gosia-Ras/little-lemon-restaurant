@@ -7,7 +7,7 @@ function Testimonials() {
       <h3>testimonials</h3>
       <div className="testimonials_container">
         {data.testimonials.map((testimonial) => (
-          <div className="testimonials_card">
+          <div key={testimonial.id} className="testimonials_card">
             <span className="material-symbols-outlined">
               sentiment_very_satisfied
             </span>
