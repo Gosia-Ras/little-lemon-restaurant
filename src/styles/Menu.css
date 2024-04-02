@@ -1,41 +1,97 @@
+section.menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding-inline-start: 0;
+}
+
+section.menu ul li {
+  background-color: var(--grey);
+  color: var(--green-main);
+  padding: 10px 12px;
+  border-radius: 25px;
+  text-transform: capitalize;
+  font-family: "Karla", serif;
+  font-weight: 800;
+}
+
 section.menu .dishes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
+  border-top: 2px solid var(--grey);
+  padding: 30px 0;
 }
 
-section.menu .dishes div {
+section.menu .dishes .dish {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 20px;
+  border-bottom: 1px solid var(--grey);
+}
+section.menu .dishes .dish .image-container {
+  order: 1;
 }
 
-section.menu .dishes img {
+section.menu .dishes .dish img {
   width: 100%;
-  height: auto;
-  max-height: 250px;
+  height: 300px;
   object-fit: cover;
 }
 
-section.menu .dishes h3,
-section.menu .dishes p {
-  margin: 0;
-  padding: 10px;
-}
-
-section.menu .dishes div > div {
+section.menu .dishes .dish > div {
   flex-grow: 1;
+  order: 2;
 }
 
+section.menu .dishes .dish > div .description {
+  color: var(--green-main);
+}
+
+section.menu .dishes .dish > div .price {
+  color: var(--green-main);
+  font-weight: 600;
+}
+
+/* Adjustments for screens less than 992px */
 @media (max-width: 992px) {
   section.menu .dishes {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  section.menu .dishes .dish img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  section.menu .dishes .dish .image-container {
+    flex: 0 0 100px;
+    order: 2;
+  }
+
+  section.menu .dishes .dish > div {
+    flex-grow: 1;
+    order: 1;
   }
 }
 
 @media (max-width: 767px) {
   section.menu .dishes {
     grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 15px;
+  }
+
+  section.menu .dishes .dish {
+    flex-direction: row;
+  }
+
+  section.menu .dishes .dish .image-container {
+    flex: 0 0 100px;
+  }
+
+  section.menu .dishes .dish > div {
+    flex-grow: 1;
   }
 }

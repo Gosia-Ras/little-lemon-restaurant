@@ -1,27 +1,41 @@
+import React, { useState } from "react";
 import data from "../dishesData.json";
 import "../styles/Menu.css";
 
 function Menu() {
+  const [selectedType, setSelectedType] = useState(null);
   const dishTypes = Array.from(new Set(data.dishes.map((dish) => dish.type)));
+
+  const handleTypeClick = (type) => {
+    setSelectedType(type);
+  };
+
   return (
     <section className="menu">
-      <h2>Order for delivery!</h2>
+      <h3>Order for delivery!</h3>
       <ul>
+        <li onClick={() => setSelectedType(null)}>Show All</li>
         {dishTypes.map((type) => (
-          <li key={type}>{type}</li>
+          <li key={type} onClick={() => handleTypeClick(type)}>
+            {type}
+          </li>
         ))}
       </ul>
       <div className="dishes">
-        {data.dishes.map((dish) => (
-          <div key={dish.id} data-type={dish.type}>
-            <img src={dish.photo} alt="Greek salad" />
-            <div>
-              <h3>{dish.name}</h3>
-              <p>{dish.description}</p>
-              <p>{dish.price}</p>
+        {data.dishes
+          .filter((dish) => selectedType === null || dish.type === selectedType)
+          .map((dish) => (
+            <div key={dish.id} data-type={dish.type} className="dish">
+              <div>
+                <h4>{dish.name}</h4>
+                <p className="description">{dish.description}</p>
+                <p className="price">${dish.price}</p>
+              </div>
+              <div className="image-container">
+                <img src={dish.photo} alt={dish.name} />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
     </section>
   );
