@@ -20,7 +20,6 @@ section.menu .dishes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
-  border-top: 2px solid var(--grey);
   padding: 30px 0;
 }
 
@@ -28,7 +27,6 @@ section.menu .dishes .dish {
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-bottom: 1px solid var(--grey);
 }
 section.menu .dishes .dish .image-container {
   order: 1;
@@ -77,13 +75,19 @@ section.menu .dishes .dish > div .price {
 }
 
 @media (max-width: 767px) {
+  section.menu ul {
+    flex-wrap: wrap;
+  }
+
   section.menu .dishes {
     grid-template-columns: repeat(1, 1fr);
     grid-column-gap: 0;
     grid-row-gap: 15px;
+    border-top: 2px solid var(--grey);
   }
 
   section.menu .dishes .dish {
+    border-bottom: 1px solid var(--grey);
     flex-direction: row;
   }
 
