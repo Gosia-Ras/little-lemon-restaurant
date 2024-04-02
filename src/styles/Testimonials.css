@@ -1,12 +1,27 @@
-.testimonials_container {
+section.testimonials h3 {
+  text-align: center;
+}
+
+section.testimonials .testimonials-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  margin-top: 30px;
+}
+
+section.testimonials .testimonials-container .testimonial-card {
+  background-color: var(--grey);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 767px) {
-  .testimonials_container {
+  section.testimonials .testimonials-container {
     grid-template-columns: auto;
   }
 }

@@ -5,9 +5,9 @@ function Testimonials() {
   return (
     <section className="testimonials">
       <h3>testimonials</h3>
-      <div className="testimonials_container">
+      <div className="testimonials-container">
         {data.testimonials.map((testimonial) => (
-          <div key={testimonial.id} className="testimonials_card">
+          <div key={testimonial.id} className="testimonial-card">
             <span className="material-symbols-outlined">
               sentiment_very_satisfied
             </span>
