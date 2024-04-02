@@ -1,80 +1,22 @@
 import "../styles/Testimonials.css";
+import data from "../testimonialsData.json";
 
 function Testimonials() {
   return (
     <section className="testimonials">
       <h3>testimonials</h3>
       <div className="testimonials_container">
-        <div className="testimonials_card">
-          <span className="material-symbols-outlined">
-            sentiment_very_satisfied
-          </span>
-          <p>Michael Caldwell</p>
-          <p>This is the best Mediterranean food I've ever had!</p>
-        </div>
-        <div className="testimonials_card">
-          <span className="material-symbols-outlined">
-            sentiment_very_satisfied
-          </span>
-          <p>Michael Caldwell</p>
-          <p>This is the best Mediterranean food I've ever had!</p>
-        </div>
-        <div className="testimonials_card">
-          <span className="material-symbols-outlined">
-            sentiment_very_satisfied
-          </span>
-          <p>Michael Caldwell</p>
-          <p>This is the best Mediterranean food I've ever had!</p>
-        </div>
-        <div className="testimonials_card">
-          <span className="material-symbols-outlined">
-            sentiment_very_satisfied
-          </span>
-          <p>Michael Caldwell</p>
-          <p>This is the best Mediterranean food I've ever had!</p>
-        </div>
-        <div className="testimonials_card">
-          <span className="material-symbols-outlined">
-            sentiment_very_satisfied
-          </span>
-          <p>Michael Caldwell</p>
-          <p>This is the best Mediterranean food I've ever had!</p>
-        </div>
-        <div className="testimonials_card">
-          <span className="material-symbols-outlined">
-            sentiment_very_satisfied
-          </span>
-          <p>Michael Caldwell</p>
-          <p>This is the best Mediterranean food I've ever had!</p>
-        </div>
-        <div className="testimonials_card">
-          <span className="material-symbols-outlined">
-            sentiment_very_satisfied
-          </span>
-          <p>Michael Caldwell</p>
-          <p>This is the best Mediterranean food I've ever had!</p>
-        </div>
-        <div className="testimonials_card">
-          <span className="material-symbols-outlined">
-            sentiment_very_satisfied
-          </span>
-          <p>Michael Caldwell</p>
-          <p>This is the best Mediterranean food I've ever had!</p>
-        </div>
-        <div className="testimonials_card">
-          <span className="material-symbols-outlined">
-            sentiment_very_satisfied
-          </span>
-          <p>Michael Caldwell</p>
-          <p>This is the best Mediterranean food I've ever had!</p>
-        </div>
-        <div className="testimonials_card">
-          <span className="material-symbols-outlined">
-            sentiment_very_satisfied
-          </span>
-          <p>Michael Caldwell</p>
-          <p>This is the best Mediterranean food I've ever had!</p>
-        </div>
+        {data.testimonials.map((testimonial) => (
+          <div className="testimonials_card">
+            <span className="material-symbols-outlined">
+              sentiment_very_satisfied
+            </span>
+            <p>
+              {testimonial.name} {testimonial.surname}
+            </p>
+            <p>{testimonial.review}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
