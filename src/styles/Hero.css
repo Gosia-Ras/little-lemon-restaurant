@@ -1,4 +1,69 @@
 section.hero {
+  display: flex;
+  background-color: var(--green-main);
+  padding: 30px;
+}
+
+section.hero .image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+section.hero h1 {
+  color: var(--yellow);
+}
+
+section.hero h2,
+section.hero p {
+  color: var(--grey);
+}
+
+section.hero button {
+  background-color: var(--yellow);
+  color: var(--black);
+  border-radius: 50px;
+  padding: 5px 10px;
+  border: none;
+  font-weight: 600;
+  font-family: "Karla", serif;
+  font-size: 1.1rem;
+}
+
+section.hero .flex-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 30px;
+}
+
+section.hero .flex-container p {
+  font-size: 1.3rem;
+}
+
+section.hero .flex-container img {
+  border-radius: 20px;
+}
+
+@media (max-width: 992px) {
+  section.hero .image-container {
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  section.hero .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 767px) {
+  section.hero .flex-container {
+    align-items: center;
+  }
 }

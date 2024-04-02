@@ -1,13 +1,69 @@
+:root {
+  --green-main: #495e57;
+  --green-accent: #48742c;
+  --yellow: #f4ce14;
+  --yellow-accent: #dab811;
+  --grey: #edefee;
+  --black: #141414;
+}
+
+* {
+  font-family: "Markazi Text", "Karla", serif;
+  color: var(--black);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  margin: 0;
+  font-size: 4rem;
+  font-family: "Markazi Text", serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: "Markazi Text", serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+label,
+input,
+select,
+textarea,
+p {
+  font-family: "Karla";
+}
+
+section {
+  padding: 0 50px;
 }

@@ -17,7 +17,6 @@ function Menu() {
             <img src={dish.photo} alt="Greek salad" />
             <div>
               <h3>{dish.name}</h3>
-
               <p>{dish.description}</p>
               <p>{dish.price}</p>
             </div>

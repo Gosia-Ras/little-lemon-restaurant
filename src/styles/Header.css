@@ -4,9 +4,6 @@ header {
   align-items: center;
   padding: 15px;
 }
-.logo {
-  padding-left: 30px;
-}
 
 .logo img {
   max-width: 100%;
@@ -33,11 +30,6 @@ header ul {
   header {
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-
-  .logo {
-    padding-left: 0;
-    width: calc(100% - 180px);
   }
 
   .icon {

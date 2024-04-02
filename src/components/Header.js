@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Nav from "./Nav";
 import logo from "../assets/Logo.svg";
 import hamburger from "../assets/hamburger_menu.svg";
+import basket from "../assets/Basket.svg";
 import "../styles/Header.css";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,6 +30,9 @@ function Header() {
         <img src={logo} alt="Little Lemon Logo" />
       </a>
       {(!isMobile || isMenuOpen) && <Nav />}
+      <a href="#">
+        <img src={basket} />
+      </a>
     </header>
   );
 }
