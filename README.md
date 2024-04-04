@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Your App Name
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This React-based web application serves as a virtual platform for a Mediterranean restaurant named "Little Lemon." The app offers various functionalities to enhance the user experience, primarily focusing on facilitating table reservations.
 
-In the project directory, you can run:
+Key features of the app include:
 
-### `npm start`
+Homepage: Introduction to the restaurant and its' cuisine.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Booking Page: Users can book a table at the restaurant through the booking page. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Sign-Up and Login Pages: To streamline the reservation process, the app includes sign-up and login pages for users. New visitors can create an account to manage their reservations and preferences, while existing users can log in to access their accounts.
 
-### `npm test`
+Confirmation Page: Upon successfully booking a table, users are redirected to a confirmation page confirming their reservation details. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Navigation: The app features a navigation menu that allows users to easily explore different sections of the website, such as the about section, menu, reservation page, and contact information.
 
-### `npm run build`
+This restaurant web application aims to provide a seamless and enjoyable experience for users seeking to dine at "Little Lemon." By offering intuitive reservation functionalities and an informative interface, the app strives to enhance customer satisfaction and engagement with the restaurant's services.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone this repository: `git clone <repository_url>`
+2. Navigate to the project directory: `cd <project_directory>`
+3. Install dependencies: `npm install`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+1. Run the development server: `npm start`
+2. Open your browser and navigate to `http://localhost:3000` to view the app.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Routes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `/` - Homepage
+- `/booking` - Booking Page
+- `/sign-up` - Sign Up Page
+- `/confirmation` - Confirmation Page
+- `/login` - Login Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Technologies Used
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- React
+- React Router
+- HTML
+- CSS
 
-## Learn More
+## Screenshots
+![Little Lemon Homepage](https://raw.githubusercontent.com/Gosia-Ras/little-lemon-restaurant/main/src/assets/homepage.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Booking Page](https://raw.githubusercontent.com/Gosia-Ras/little-lemon-restaurant/main/src/assets/booking.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
