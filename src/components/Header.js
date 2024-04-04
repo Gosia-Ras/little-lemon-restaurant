@@ -30,7 +30,7 @@ function Header() {
         <img src={logo} alt="Little Lemon Logo" />
       </a>
       {(!isMobile || isMenuOpen) && <Nav />}
-      <a href="#">
+      <a href="/delivery" className="basket">
         <img src={basket} />
       </a>
     </header>
