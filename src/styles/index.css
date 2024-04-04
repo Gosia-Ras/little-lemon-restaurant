@@ -3,6 +3,7 @@
   --green-accent: #48742c;
   --yellow: #f4ce14;
   --yellow-accent: #dab811;
+  --highlight-color: #ff8f33;
   --grey: #edefee;
   --black: #141414;
 }
@@ -64,10 +65,15 @@ label,
 input,
 select,
 textarea,
-p {
+p,
+span {
   font-family: "Karla";
+  text-transform: uppercase;
 }
 
+a {
+  text-decoration: none;
+}
 section {
   padding: 25px 50px;
 }
