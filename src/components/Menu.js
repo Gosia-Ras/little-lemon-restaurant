@@ -10,13 +10,30 @@ function Menu() {
     setSelectedType(type);
   };
 
+  const handleShowAll = () => {
+    setSelectedType(null);
+  };
+
   return (
     <section className="menu" id="menu">
       <h3>Our Menu</h3>
       <ul>
-        <li onClick={() => setSelectedType(null)}>Show All</li>
+        <li
+          onClick={handleShowAll}
+          tabIndex="0"
+          role="button"
+          aria-label="Show All Dishes"
+        >
+          Show All
+        </li>
         {dishTypes.map((type) => (
-          <li key={type} onClick={() => handleTypeClick(type)}>
+          <li
+            key={type}
+            onClick={() => handleTypeClick(type)}
+            tabIndex="0"
+            role="button"
+            aria-label={`Show ${type} Dishes`}
+          >
             {type}
           </li>
         ))}

@@ -7,11 +7,17 @@ function ConfirmationPage() {
     <>
       <Header />
       <Main>
-        <section className="confirmation">
+        <section
+          className="confirmation"
+          aria-labelledby="confirmation-heading"
+        >
+          <h2 id="confirmation-heading">Confirmation</h2>
           <p className="lead">Your request has been successfully sent!</p>
           <p>You can review reservation details in the personal account.</p>
           <br />
-          <a href="/">Return to homepage</a>
+          <a className="return-link" href="/">
+            Return to homepage
+          </a>
         </section>
       </Main>
     </>

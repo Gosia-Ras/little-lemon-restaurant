@@ -25,7 +25,10 @@ function Hero() {
             with a modern twist.
           </p>
           <div className="image-container">
-            <img src={heroImage} alt="Close-up of food" />
+            <img
+              src={heroImage}
+              alt="Close-up of food at Little Lemon, showcasing the restaurant's Mediterranean cuisine."
+            />
           </div>
         </div>
         <button onClick={handleBooking}>Reserve a table</button>

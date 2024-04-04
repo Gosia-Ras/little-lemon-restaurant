@@ -8,13 +8,13 @@ function Testimonials() {
       <div className="testimonials-container">
         {data.testimonials.map((testimonial) => (
           <div key={testimonial.id} className="testimonial-card">
-            <span className="material-symbols-outlined">
+            <span className="material-symbols-outlined" aria-label="Happy">
               sentiment_very_satisfied
             </span>
-            <p>
+            <p className="testimonial-name">
               {testimonial.name} {testimonial.surname}
             </p>
-            <p>{testimonial.review}</p>
+            <p className="testimonial-review">{testimonial.review}</p>
           </div>
         ))}
       </div>

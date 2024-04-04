@@ -22,15 +22,12 @@ function BookingForm({ state, dispatch }) {
       occasion,
     };
 
-    // Submit the form using the API
     const result = fakeAPI.submitAPI(formData);
 
     if (result) {
-      // Handle successful submission
-      navigate("/sign-up"); // For example: navigate to a success page
+      navigate("/sign-up");
     } else {
-      // Handle submission failure
-      console.error("Submission failed."); // Adjust based on your error handling logic
+      console.error("Submission failed.");
     }
   };
 
@@ -38,26 +35,27 @@ function BookingForm({ state, dispatch }) {
     const newDate = e.target.value;
     setDate(newDate);
 
-    // Create a Date object from the input value
     const dateObject = new Date(newDate);
 
-    // Fetch available times using the API
     const availableTimes = fakeAPI.fetchAPI(dateObject);
 
-    // Dispatch an action to update the state with these times
     dispatch({
       type: "UPDATE_TIMES_BASED_ON_DATE",
-      availableTimes, // Ensure your reducer handles this action properly
+      availableTimes,
     });
   };
 
   return (
-    <section className="booking">
-      <h1>Find your table</h1>
-      <form onSubmit={handleSubmit}>
+    <section className="booking" aria-labelledby="bookingFormTitle">
+      <h1 id="bookingFormTitle">Find your table</h1>
+      <form onSubmit={handleSubmit} aria-describedby="closureMessage">
         <div className="form-group">
           <label htmlFor="date">
-            Date<span className="required"> *</span>
+            Date
+            <span className="required" aria-hidden="true">
+              {" "}
+              *
+            </span>
           </label>
           <input
             type="date"
@@ -66,21 +64,35 @@ function BookingForm({ state, dispatch }) {
             value={date}
             onChange={handleDateChange}
             required
+            aria-required="true"
           />
           {closureMessage && (
-            <div className="closure-message">{closureMessage}</div>
+            <div
+              className="closure-message"
+              id="closureMessage"
+              role="alert"
+              aria-live="assertive"
+            >
+              {closureMessage}
+            </div>
           )}
         </div>
 
         <div className="form-group">
           <label htmlFor="time">
-            Time <span className="required"> *</span>
+            Time{" "}
+            <span className="required" aria-hidden="true">
+              {" "}
+              *
+            </span>
           </label>
           <select
             name="time"
+            id="time"
             value={time}
             onChange={(e) => setTime(e.target.value)}
             required
+            aria-required="true"
           >
             {(availableTimes || []).map((timeOption) => (
               <option key={timeOption} value={timeOption}>
@@ -92,13 +104,19 @@ function BookingForm({ state, dispatch }) {
 
         <div className="form-group">
           <label htmlFor="guests">
-            Guests <span className="required"> *</span>
+            Guests{" "}
+            <span className="required" aria-hidden="true">
+              {" "}
+              *
+            </span>
           </label>
           <select
             name="guests"
+            id="guests"
             value={guests}
             onChange={(e) => setGuests(e.target.value)}
             required
+            aria-required="true"
           >
             <option>1</option>
             <option>2</option>
@@ -109,12 +127,16 @@ function BookingForm({ state, dispatch }) {
         </div>
 
         <div className="form-group table">
-          <span>
+          <span id="occasionLabel">
             Occasion
             <br />
             (optional):
           </span>
-          <div className="custom-radio-container">
+          <div
+            className="custom-radio-container"
+            role="radiogroup"
+            aria-labelledby="occasionLabel"
+          >
             {["birthday", "Anniversary", "Business"].map((occ) => (
               <label key={occ} className="custom-radio">
                 {occ}
@@ -125,6 +147,7 @@ function BookingForm({ state, dispatch }) {
                   value={occ}
                   checked={occasion === occ}
                   onChange={(e) => setOccasion(e.target.value)}
+                  aria-checked={occasion === occ}
                 />
                 <span className="checkmark"></span>
               </label>

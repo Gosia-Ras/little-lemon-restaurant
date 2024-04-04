@@ -17,7 +17,7 @@ function SignUpPage() {
 
   return (
     <Main>
-      <section className="reservation">
+      <section className="reservation" aria-labelledby="signup-heading">
         <button className="button-back" onClick={handleBack}>
           <svg
             width="40"

@@ -26,15 +26,25 @@ function Header() {
   }, []);
   return (
     <header>
-      <button className="icon" href="#" onClick={toggleHamburgerMenu}>
+      <button
+        className="icon"
+        href="#"
+        onClick={toggleHamburgerMenu}
+        aria-label="Menu"
+        aria-expanded={isMenuOpen}
+      >
         <img src={hamburger} alt="hamburger" />
       </button>
       <a href="/" className="logo">
         <img src={logo} alt="Little Lemon Logo" />
       </a>
       {(!isMobile || isMenuOpen) && <Nav />}
-      <button onClick={handleBasket} className="basket">
-        <img src={basket} />
+      <button
+        onClick={handleBasket}
+        className="basket"
+        aria-label="View Basket"
+      >
+        <img src={basket} alt="Basket" />
       </button>
     </header>
   );

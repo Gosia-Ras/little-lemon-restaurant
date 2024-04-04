@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer id="footer">
       <img src={logo} alt="Little Lemon Logo" />
-      <div className="nav">
+      <div className="nav" aria-label="Footer navigation">
         <h3>Navigation</h3>
         <Nav />
       </div>
@@ -28,14 +28,26 @@ function Footer() {
         <ul>
           <li>
             {" "}
-            <a href="https://www.facebook.com">Facebook</a>
+            <a
+              href="https://www.facebook.com"
+              aria-label="Follow us on Facebook"
+            >
+              Facebook
+            </a>
           </li>
           <li>
             {" "}
-            <a href="https://www.instagram.com">Instagram</a>
+            <a
+              href="https://www.instagram.com"
+              aria-label="Follow us on Instagram"
+            >
+              Instagram
+            </a>
           </li>
           <li>
-            <a href="/booking-details">Join Us</a>
+            <a href="/booking-details" aria-label="Join us">
+              Join Us
+            </a>
           </li>
         </ul>
       </div>

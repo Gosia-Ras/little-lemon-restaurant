@@ -3,8 +3,8 @@ import "../styles/About.css";
 
 function AboutUs() {
   return (
-    <section className="about" id="about">
-      <div>
+    <section className="about" id="about" aria-labelledby="aboutUsTitle">
+      <article>
         <h3>About Us</h3>
         <p>
           Little Lemon opened in 1995 by two Italian brothers, Adrian and Mario.
@@ -14,8 +14,8 @@ function AboutUs() {
           brothers continue to oversee the Little Lemon restaurant, nearly
           thirty years later.
         </p>
-      </div>
-      <img src={aboutPhoto} />
+      </article>
+      <img src={aboutPhoto} alt="Adrian and Mario,founders of Little Lemon" />
     </section>
   );
 }
