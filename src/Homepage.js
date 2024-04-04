@@ -4,6 +4,7 @@ import Main from "./components/Main";
 import Menu from "./components/Menu";
 import Hero from "./components/Hero";
 import Testimonials from "./components/Testimonials";
+import AboutUs from "./components/AboutUs";
 
 function Homepage() {
   return (
@@ -13,6 +14,7 @@ function Homepage() {
         <Hero />
         <Menu />
         <Testimonials />
+        <AboutUs />
       </Main>
       <Footer />
     </>

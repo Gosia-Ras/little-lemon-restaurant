@@ -1,0 +1,23 @@
+section.about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: var(--yellow);
+  gap: 50px;
+}
+
+section.about p {
+  align-self: center;
+  line-height: 1.4;
+}
+
+section.about img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+@media (max-width: 992px) {
+  section.about {
+    grid-template-columns: auto;
+  }
+}

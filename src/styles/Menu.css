@@ -44,6 +44,7 @@ section.menu .dishes .dish img {
   width: 100%;
   height: 300px;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 section.menu .dishes .dish > div {
