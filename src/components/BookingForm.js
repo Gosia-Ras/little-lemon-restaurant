@@ -9,7 +9,7 @@ function BookingForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate("/booking-details");
+    navigate("/sign-up");
   };
   return (
     <section className="booking">

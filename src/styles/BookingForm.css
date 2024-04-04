@@ -74,7 +74,7 @@ section.booking input[type="date"],
 section.booking input[type="time"],
 section.booking input[type="radio"] {
   border: 1px solid black;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 7px 10px;
 }
 
@@ -99,7 +99,7 @@ section.booking .required {
 }
 
 section.booking input[type="submit"] {
-  border-radius: 15px;
+  border-radius: 12px;
   padding: 7px 15px;
   background-color: var(--yellow);
   border: none;
@@ -130,6 +130,7 @@ section.booking .custom-radio {
   font-size: 16px;
   display: flex;
   align-items: center;
+  padding-top: 2px;
 }
 
 section.booking .custom-radio input[type="radio"] {

@@ -83,6 +83,7 @@ section.reservation .social-container div a {
 section.reservation .custom-radio {
   position: relative;
   padding-left: 35px;
+  padding-top: 2px;
   cursor: pointer;
   display: flex;
   align-items: center;

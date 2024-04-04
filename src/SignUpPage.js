@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Main from "./components/Main";
-import "./styles/ReservationPage.css";
+import "./styles/SignUpPage.css";
 
-function ReservationPage() {
+function SignUpPage() {
   const navigate = useNavigate();
 
   const handleBack = () => {
@@ -15,10 +15,6 @@ function ReservationPage() {
     navigate("/confirmation");
   };
 
-  const handleLogin = (event) => {
-    event.preventDefault();
-    navigate("/login");
-  };
   return (
     <Main>
       <section className="reservation">
@@ -72,13 +68,12 @@ function ReservationPage() {
                 id="signedIn"
                 name="signedInStatus"
                 value="signedIn"
-                required
               />
               <span className="checkmark"></span>
             </label>
           </div>
           <p>
-            Already a member? <a onClick={handleLogin}>Log in</a>
+            Already a member? <a href="/login">Log in</a>
           </p>
 
           <input type="submit" className="submit" value="Reserve" />
@@ -160,4 +155,4 @@ function ReservationPage() {
   );
 }
 
-export default ReservationPage;
+export default SignUpPage;
