@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import fakeAPI from "../bookingApi";
 import "../styles/BookingForm.css";
 import bruschetta from "../assets/bruschetta.jpg";
 
@@ -14,14 +14,41 @@ function BookingForm({ state, dispatch }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate("/sign-up");
+
+    const formData = {
+      date,
+      time,
+      guests,
+      occasion,
+    };
+
+    // Submit the form using the API
+    const result = fakeAPI.submitAPI(formData);
+
+    if (result) {
+      // Handle successful submission
+      navigate("/sign-up"); // For example: navigate to a success page
+    } else {
+      // Handle submission failure
+      console.error("Submission failed."); // Adjust based on your error handling logic
+    }
   };
 
   const handleDateChange = (e) => {
     const newDate = e.target.value;
     setDate(newDate);
 
-    dispatch({ type: "UPDATE_TIMES_BASED_ON_DATE", date: newDate });
+    // Create a Date object from the input value
+    const dateObject = new Date(newDate);
+
+    // Fetch available times using the API
+    const availableTimes = fakeAPI.fetchAPI(dateObject);
+
+    // Dispatch an action to update the state with these times
+    dispatch({
+      type: "UPDATE_TIMES_BASED_ON_DATE",
+      availableTimes, // Ensure your reducer handles this action properly
+    });
   };
 
   return (
