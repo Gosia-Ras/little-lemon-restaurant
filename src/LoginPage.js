@@ -17,7 +17,7 @@ function LoginPage() {
 
   return (
     <Main>
-      <section className="reservation">
+      <section className="reservation"  aria-labelledby="login-heading">
         <button className="button-back" onClick={handleBack}>
           <svg
             width="40"
