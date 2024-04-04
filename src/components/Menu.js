@@ -11,8 +11,8 @@ function Menu() {
   };
 
   return (
-    <section className="menu">
-      <h3>Order for delivery!</h3>
+    <section className="menu" id="menu">
+      <h3>Our Menu</h3>
       <ul>
         <li onClick={() => setSelectedType(null)}>Show All</li>
         {dishTypes.map((type) => (

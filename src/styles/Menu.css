@@ -14,6 +14,13 @@ section.menu ul li {
   text-transform: capitalize;
   font-family: "Karla", serif;
   font-weight: 800;
+  transition: all 300ms ease-in-out;
+}
+
+section.menu ul li:hover {
+  background-color: var(--green-main);
+  color: var(--grey);
+  cursor: pointer;
 }
 
 section.menu .dishes {
@@ -28,6 +35,7 @@ section.menu .dishes .dish {
   flex-direction: column;
   width: 100%;
 }
+
 section.menu .dishes .dish .image-container {
   order: 1;
 }
