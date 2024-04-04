@@ -5,7 +5,7 @@ import BookingPage from "./BookingPage";
 import SignUpPage from "./SignUpPage";
 import ConfirmationPage from "./ConfirmationPage";
 import LoginPage from "./LoginPage";
-import DeliveryPage from "./DeliveryPage";
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,7 +15,6 @@ function App() {
         <Route path="/sign-up" element={<SignUpPage />} />
         <Route path="/confirmation" element={<ConfirmationPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/delivery" element={<DeliveryPage />} />
       </Routes>
     </BrowserRouter>
   );
