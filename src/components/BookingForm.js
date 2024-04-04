@@ -4,33 +4,24 @@ import { useNavigate } from "react-router-dom";
 import "../styles/BookingForm.css";
 import bruschetta from "../assets/bruschetta.jpg";
 
-function BookingForm() {
+function BookingForm({ state, dispatch }) {
+  const { availableTimes, closureMessage } = state;
   const navigate = useNavigate();
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [guests, setGuests] = useState("1"); // Default to 1 guest
+  const [guests, setGuests] = useState("1");
   const [occasion, setOccasion] = useState("");
-  const [availableTimes, setAvailableTimes] = useState([
-    "15:00",
-    "15:30",
-    "16:00",
-    "16:30",
-    "17:00",
-    "17:30",
-    "18:00",
-    "18:30",
-    "19:00",
-    "19:30",
-    "20:00",
-    "20:30",
-    "21:00",
-  ]);
-
-  const [guestNumber, setGuestNumber] = useState(["1", "2", "3", "4", "5"]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     navigate("/sign-up");
+  };
+
+  const handleDateChange = (e) => {
+    const newDate = e.target.value;
+    setDate(newDate);
+
+    dispatch({ type: "UPDATE_TIMES_BASED_ON_DATE", date: newDate });
   };
 
   return (
@@ -46,9 +37,12 @@ function BookingForm() {
             id="date"
             name="date"
             value={date}
-            onChange={(e) => setDate(e.target.value)}
+            onChange={handleDateChange}
             required
           />
+          {closureMessage && (
+            <div className="closure-message">{closureMessage}</div>
+          )}
         </div>
 
         <div className="form-group">
@@ -61,7 +55,7 @@ function BookingForm() {
             onChange={(e) => setTime(e.target.value)}
             required
           >
-            {availableTimes.map((timeOption) => (
+            {(availableTimes || []).map((timeOption) => (
               <option key={timeOption} value={timeOption}>
                 {timeOption}
               </option>
