@@ -1,0 +1,139 @@
+/* Base Styles for the Reservation Page */
+body:has(section.reservation) {
+  background-color: var(--green-main);
+}
+
+/* Section Styles */
+section.reservation {
+  background-color: var(--grey);
+  margin: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.reservation button.button-back {
+  align-self: start;
+}
+
+section.reservation button.button-back svg {
+  margin-right: 15px;
+}
+
+section.reservation h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form Styles */
+section.reservation form {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  width: 50vw;
+  margin: 0 auto;
+}
+
+section.reservation form div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+section.reservation form p,
+section.reservation .social-container p {
+  text-align: center;
+}
+
+/* Input Styles */
+section.reservation input,
+section.reservation .custom-radio input[type="radio"] {
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 7px 10px;
+}
+
+section.reservation input[type="submit"] {
+  background-color: var(--yellow);
+  border: none;
+  width: max-content;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+section.reservation input[type="submit"]:hover {
+  background-color: var(--highlight-color);
+}
+
+/* Social Container Styles */
+section.reservation .social-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.reservation .social-container div a {
+  margin: 0 15px;
+}
+
+/* Custom Radio Button Styles */
+section.reservation .custom-radio {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+section.reservation .custom-radio input[type="radio"] {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+section.reservation .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid var(--green-accent);
+}
+
+section.reservation .custom-radio input:checked ~ .checkmark {
+  background-color: var(--green-accent);
+}
+
+section.reservation .checkmark:after {
+  content: "✓";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+}
+
+section.reservation .custom-radio input:checked ~ .checkmark:after {
+  display: block;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  section.reservation form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  section.reservation form div {
+    flex-direction: column;
+  }
+}
