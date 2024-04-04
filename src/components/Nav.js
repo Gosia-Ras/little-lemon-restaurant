@@ -1,6 +1,9 @@
 import "../styles/Nav.css";
 
 function Nav() {
+  const handleBasket = () => {
+    alert("Delivery function not implemented yet :)");
+  };
   return (
     <nav>
       <ul>
@@ -14,7 +17,7 @@ function Nav() {
           <a href="/booking">Reserve a table</a>
         </li>
         <li>
-          <a href="/delivery">Place an order</a>
+          <a onClick={handleBasket}>Place an order</a>
         </li>
         <li>
           <a href="#footer">Contact Us</a>

@@ -5,6 +5,9 @@ import hamburger from "../assets/hamburger_menu.svg";
 import basket from "../assets/Basket.svg";
 import "../styles/Header.css";
 function Header() {
+  const handleBasket = () => {
+    alert("Delivery function not implemented yet :)");
+  };
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
@@ -23,16 +26,16 @@ function Header() {
   }, []);
   return (
     <header>
-      <a className="icon" href="#" onClick={toggleHamburgerMenu}>
+      <button className="icon" href="#" onClick={toggleHamburgerMenu}>
         <img src={hamburger} alt="hamburger" />
-      </a>
+      </button>
       <a href="/" className="logo">
         <img src={logo} alt="Little Lemon Logo" />
       </a>
       {(!isMobile || isMenuOpen) && <Nav />}
-      <a href="/delivery" className="basket">
+      <button onClick={handleBasket} className="basket">
         <img src={basket} />
-      </a>
+      </button>
     </header>
   );
 }

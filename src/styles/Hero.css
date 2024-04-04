@@ -1,7 +1,6 @@
 section.hero {
   display: flex;
   background-color: var(--green-main);
-  padding: 30px;
 }
 
 section.hero .image-container img {
