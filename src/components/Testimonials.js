@@ -3,7 +3,7 @@ import data from "../testimonialsData.json";
 
 function Testimonials() {
   return (
-    <section className="testimonials">
+    <section className="testimonials" id="about">
       <h3>testimonials</h3>
       <div className="testimonials-container">
         {data.testimonials.map((testimonial) => (
