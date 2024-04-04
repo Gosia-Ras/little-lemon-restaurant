@@ -1,16 +1,38 @@
-import React from "react";
-import { useNavigate } from "react-router-dom"; //
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "../styles/BookingForm.css";
 import bruschetta from "../assets/bruschetta.jpg";
 
 function BookingForm() {
-  const navigate = useNavigate(); //
+  const navigate = useNavigate();
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const [guests, setGuests] = useState("1"); // Default to 1 guest
+  const [occasion, setOccasion] = useState("");
+  const [availableTimes, setAvailableTimes] = useState([
+    "15:00",
+    "15:30",
+    "16:00",
+    "16:30",
+    "17:00",
+    "17:30",
+    "18:00",
+    "18:30",
+    "19:00",
+    "19:30",
+    "20:00",
+    "20:30",
+    "21:00",
+  ]);
+
+  const [guestNumber, setGuestNumber] = useState(["1", "2", "3", "4", "5"]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     navigate("/sign-up");
   };
+
   return (
     <section className="booking">
       <h1>Find your table</h1>
@@ -19,28 +41,31 @@ function BookingForm() {
           <label htmlFor="date">
             Date<span className="required"> *</span>
           </label>
-          <input type="date" id="date" name="date" required />
+          <input
+            type="date"
+            id="date"
+            name="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            required
+          />
         </div>
 
         <div className="form-group">
           <label htmlFor="time">
             Time <span className="required"> *</span>
           </label>
-          <select name="time">
-            <option>15:00</option>
-            <option>15:30</option>
-            <option>16:00</option>
-            <option>16:30</option>
-            <option>17:00</option>
-            <option>17:30</option>
-            <option>18:00</option>
-            <option>18:30</option>
-            <option>19:00</option>
-            <option>19:30</option>
-            <option>20:00</option>
-            <option>20:30</option>
-            <option>21:00</option>
-            <option>21:30</option>
+          <select
+            name="time"
+            value={time}
+            onChange={(e) => setTime(e.target.value)}
+            required
+          >
+            {availableTimes.map((timeOption) => (
+              <option key={timeOption} value={timeOption}>
+                {timeOption}
+              </option>
+            ))}
           </select>
         </div>
 
@@ -48,7 +73,12 @@ function BookingForm() {
           <label htmlFor="guests">
             Guests <span className="required"> *</span>
           </label>
-          <select>
+          <select
+            name="guests"
+            value={guests}
+            onChange={(e) => setGuests(e.target.value)}
+            required
+          >
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -59,45 +89,25 @@ function BookingForm() {
 
         <div className="form-group table">
           <span>
-            Table
+            Occasion
             <br />
             (optional):
           </span>
-
           <div className="custom-radio-container">
-            <label className="custom-radio">
-              Inside
-              <input
-                type="radio"
-                id="inside"
-                name="tableLocation"
-                value="inside"
-                required
-              />
-              <span className="checkmark"></span>
-            </label>
-
-            <label className="custom-radio">
-              Event Zone
-              <input
-                type="radio"
-                id="event"
-                name="tableLocation"
-                value="event"
-              />
-              <span className="checkmark"></span>
-            </label>
-
-            <label className="custom-radio">
-              Outside
-              <input
-                type="radio"
-                id="outside"
-                name="tableLocation"
-                value="outside"
-              />
-              <span className="checkmark"></span>
-            </label>
+            {["birthday", "Anniversary", "Business"].map((occ) => (
+              <label key={occ} className="custom-radio">
+                {occ}
+                <input
+                  type="radio"
+                  id={occ}
+                  name="occasion"
+                  value={occ}
+                  checked={occasion === occ}
+                  onChange={(e) => setOccasion(e.target.value)}
+                />
+                <span className="checkmark"></span>
+              </label>
+            ))}
           </div>
         </div>
 
