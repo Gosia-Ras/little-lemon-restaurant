@@ -1,0 +1,17 @@
+section.confirmation {
+  background-color: var(--grey);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.confirmation p {
+  color: var(--green-accent);
+  font-size: 2rem;
+  font-family: "Markazi Text", serif;
+}
+
+section.confirmation p {
+  text-transform: none;
+}

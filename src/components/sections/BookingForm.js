@@ -1,33 +1,24 @@
 import React, { useState } from "react";
+import { useFormData } from "../../FormDataContext";
 import { useNavigate } from "react-router-dom";
+
 import fakeAPI from "../../bookingApi";
 import "../../styles/BookingForm.css";
 
 function BookingForm({ state, dispatch }) {
   const { availableTimes, closureMessage } = state;
   const navigate = useNavigate();
+  const { setFormData } = useFormData();
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [guests, setGuests] = useState("1");
+  const [guests, setGuests] = useState("");
+  const [seating, setseating] = useState("");
   const [occasion, setOccasion] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    const formData = {
-      date,
-      time,
-      guests,
-      occasion,
-    };
-
-    const result = fakeAPI.submitAPI(formData);
-
-    if (result) {
-      navigate("/sign-up");
-    } else {
-      console.error("Submission failed.");
-    }
+    setFormData({ date, time, guests, seating, occasion });
+    navigate("/details");
   };
 
   const handleDateChange = (e) => {
@@ -47,114 +38,142 @@ function BookingForm({ state, dispatch }) {
   return (
     <section className="booking" aria-labelledby="bookingFormTitle">
       <h1 id="bookingFormTitle">Find your table</h1>
-      <form onSubmit={handleSubmit} aria-describedby="closureMessage">
-        <div className="form-group">
-          <label htmlFor="date">
-            Date
-            <span className="required" aria-hidden="true">
-              {" "}
-              *
-            </span>
-          </label>
-          <input
-            type="date"
-            id="date"
-            name="date"
-            value={date}
-            onChange={handleDateChange}
-            required
-            aria-required="true"
-          />
-          {closureMessage && (
-            <div
-              className="closure-message"
-              id="closureMessage"
-              role="alert"
-              aria-live="assertive"
-            >
-              {closureMessage}
-            </div>
-          )}
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="time">
-            Time{" "}
-            <span className="required" aria-hidden="true">
-              {" "}
-              *
-            </span>
-          </label>
-          <select
-            name="time"
-            id="time"
-            value={time}
-            onChange={(e) => setTime(e.target.value)}
-            required
-            aria-required="true"
-          >
-            {(availableTimes || []).map((timeOption) => (
-              <option key={timeOption} value={timeOption}>
-                {timeOption}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="guests">
-            Guests{" "}
-            <span className="required" aria-hidden="true">
-              {" "}
-              *
-            </span>
-          </label>
-          <select
-            name="guests"
-            id="guests"
-            value={guests}
-            onChange={(e) => setGuests(e.target.value)}
-            required
-            aria-required="true"
-          >
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-
-        <div className="form-group table">
-          <span id="occasionLabel">
-            Occasion
-            <br />
-            (optional):
-          </span>
+      <form
+        onSubmit={handleSubmit}
+        aria-describedby="closureMessage"
+        className="booking-form"
+      >
+        <div className="row">
+          {" "}
           <div
-            className="custom-radio-container"
+            className="custom-radio-container form-group"
             role="radiogroup"
-            aria-labelledby="occasionLabel"
+            aria-labelledby="seatingLabel"
           >
-            {["birthday", "Anniversary", "Business"].map((occ) => (
-              <label key={occ} className="custom-radio">
-                {occ}
+            {["Outside seating", "Inside seating"].map((seat) => (
+              <label key={seat} className="custom-radio">
+                {seat}
+
                 <input
                   type="radio"
-                  id={occ}
-                  name="occasion"
-                  value={occ}
-                  checked={occasion === occ}
-                  onChange={(e) => setOccasion(e.target.value)}
-                  aria-checked={occasion === occ}
+                  id={seat}
+                  name="seating"
+                  value={seat}
+                  checked={seating === seat}
+                  onChange={(e) => setseating(e.target.value)}
+                  aria-checked={seating === seat}
                 />
-                <span className="checkmark"></span>
               </label>
             ))}
           </div>
         </div>
+        <div className="row">
+          {" "}
+          <div className="form-group">
+            <label htmlFor="date">
+              Date
+              <span className="required" aria-hidden="true">
+                {" "}
+                *
+              </span>
+            </label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              value={date}
+              onChange={handleDateChange}
+              required
+              aria-required="true"
+            />
+            {closureMessage && (
+              <div
+                className="closure-message"
+                id="closureMessage"
+                role="alert"
+                aria-live="assertive"
+              >
+                {closureMessage}
+              </div>
+            )}
+          </div>
+          <div className="form-group">
+            <label htmlFor="guests">
+              Guests
+              <span className="required" aria-hidden="true">
+                {" "}
+                *
+              </span>
+            </label>
+            <select
+              name="guests"
+              id="guests"
+              value={guests}
+              onChange={(e) => setGuests(e.target.value)}
+              required
+              aria-required="true"
+            >
+              <option value="" disabled>
+                Select guests
+              </option>{" "}
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+        <div className="row">
+          {" "}
+          <div className="form-group">
+            <label htmlFor="occasion">Occasion (optional):</label>
+            <select
+              name="occasion"
+              id="occasion"
+              value={occasion}
+              onChange={(e) => setOccasion(e.target.value)}
+            >
+              <option value="" disabled>
+                Occasion
+              </option>
+              <option value="Birthday">Birthday</option>
+              <option value="Anniversary">Anniversary</option>
+              <option value="Business">Business</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label htmlFor="time">
+              Time
+              <span className="required" aria-hidden="true">
+                {" "}
+                *
+              </span>
+            </label>
+            <select
+              name="time"
+              id="time"
+              value={time}
+              onChange={(e) => setTime(e.target.value)}
+              required
+              aria-required="true"
+            >
+              <option value="" disabled>
+                Select time
+              </option>{" "}
+              {/* Placeholder option */}
+              {(availableTimes || []).map((timeOption) => (
+                <option key={timeOption} value={timeOption}>
+                  {timeOption}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
 
-        <input type="submit" className="submit" value="Reserve" />
+        <div className="row">
+          <input type="submit" className="submit" value="Reserve" />
+        </div>
       </form>
     </section>
   );

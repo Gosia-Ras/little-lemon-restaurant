@@ -3,30 +3,7 @@ body:has(section.confirmation) {
 }
 
 /* Section Styles */
-section.confirmation {
-  background-color: var(--grey);
-  padding: 50px;
-  margin: 100px 20px;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-section.confirmation button.button-back {
-  align-self: start;
-}
-
-section.confirmation button.button-back svg {
-  margin-right: 15px;
-}
-
-section.confirmation p.lead {
-  color: var(--green-accent);
-  font-size: 2rem;
-  font-family: "Markazi Text", serif;
-}
-
-section.confirmation p {
-  text-transform: none;
+section.confirmation + section.image-grid {
+  margin-top: 0;
 }

@@ -1,0 +1,156 @@
+/* Utility Classes */
+.required {
+  color: #ff0000;
+}
+
+/* Form Base Styles */
+section.customer-details form {
+  display: block;
+}
+
+form .form-group {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+}
+
+form label {
+  color: var(--grey);
+  font-size: 0.9rem;
+}
+
+/* Input and Textarea Styles */
+select,
+input:not([type="radio"]),
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: var(--green-main);
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+input::placeholder,
+input:-ms-input-placeholder,
+input::-ms-input-placeholder {
+  color: var(--grey);
+  opacity: 1;
+}
+
+input[type="radio"] {
+  transform: scale(1.7);
+  margin-left: 15px;
+}
+
+/* Button Styles */
+input[type="submit"] {
+  border-radius: 12px;
+  padding: 7px 15px;
+  background-color: var(--yellow);
+  color: #000;
+  border: none;
+  width: max-content;
+  margin-top: 30px;
+  transition: background-color 300ms ease-in;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--highlight-color);
+}
+
+/* Layout and Grids */
+section.customer-details form .row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 30px;
+}
+
+.row.booking-details,
+.row.booking-details .form-group:not(.info) {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  align-items: start;
+}
+
+.form-data-info,
+.custom-radio-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 30px;
+}
+
+.form-data-info {
+  padding-top: 20px;
+}
+
+.form-data-info .seating {
+  grid-column: 1 / -1;
+  justify-content: center;
+}
+
+/* Icon and Agreement Styles */
+.icon-text-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-text-group span,
+.icon-text-group p {
+  color: var(--grey);
+  font-size: 1.8rem;
+}
+
+.agreement {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 30px;
+}
+
+.agreement input {
+  margin-right: 15px;
+}
+
+.agreement a {
+  color: var(--grey);
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  section.customer-details form .row {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+  }
+
+  .custom-radio-container {
+    grid-template-columns: 1fr; /* Adjust for smaller screens */
+    grid-row-gap: 15px;
+  }
+
+  .row.booking-details {
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  .form-group.requests,
+  .form-data-info {
+    order: 1; /* Adjust order for visual consistency */
+  }
+
+  .icon-text-group span,
+  .icon-text-group p {
+    color: var(--grey);
+    font-size: 1.3rem;
+  }
+}

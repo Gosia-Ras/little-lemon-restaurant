@@ -1,0 +1,14 @@
+section.booking + section.image-grid,
+section.customer-details + section.image-grid {
+  margin-top: 0;
+}
+
+section.booking,
+section.customer-details {
+  background-color: var(--green-main);
+}
+
+section.booking h1 {
+  color: var(--yellow);
+  margin-bottom: 30px;
+}

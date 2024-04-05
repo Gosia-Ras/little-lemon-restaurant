@@ -1,18 +1,17 @@
 import Header from "../Header";
 import Footer from "../Footer";
 import Main from "../Main";
-
-import BookingForm from "../sections/BookingForm";
 import ImageGrid from "../sections/ImageGrid";
 import "../../styles/BookingPage.css";
 import "../../styles/Form.css";
+import CustomerDetailsForm from "../sections/CustomerDetailsForm";
 
 function BookingPage() {
   return (
     <>
       <Header />
       <Main>
-        <BookingForm />
+        <CustomerDetailsForm />
         <ImageGrid />
       </Main>
       <Footer />

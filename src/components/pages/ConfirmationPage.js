@@ -1,25 +1,19 @@
 import Main from "../Main";
 import Header from "../Header";
 import "../../styles/ConfirmationPage.css";
+import Confirmation from "../sections/Confirmation";
+import ImageGrid from "../sections/ImageGrid";
+import Footer from "../Footer";
 
 function ConfirmationPage() {
   return (
     <>
       <Header />
       <Main>
-        <section
-          className="confirmation"
-          aria-labelledby="confirmation-heading"
-        >
-          <h2 id="confirmation-heading">Confirmation</h2>
-          <p className="lead">Your request has been successfully sent!</p>
-          <p>You can review reservation details in the personal account.</p>
-          <br />
-          <a className="return-link" href="/">
-            Return to homepage
-          </a>
-        </section>
+        <Confirmation />
+        <ImageGrid />
       </Main>
+      <Footer />
     </>
   );
 }
