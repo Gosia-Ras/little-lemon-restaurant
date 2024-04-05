@@ -82,13 +82,14 @@ section.menu .dishes .dish img {
     object-fit: cover;
   }
   section.menu .dishes .dish .image-container {
-    flex: 0 0 300px;
+    flex: 0 0 150px;
   }
 
   section.menu .dishes .dish .dish-container {
     flex-grow: 1;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
   }
 }
 
