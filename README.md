@@ -10,8 +10,6 @@ Homepage: Introduction to the restaurant and its' cuisine.
 
 Booking Page: Users can book a table at the restaurant through the booking page. 
 
-Sign-Up and Login Pages: To streamline the reservation process, the app includes sign-up and login pages for users. New visitors can create an account to manage their reservations and preferences, while existing users can log in to access their accounts.
-
 Confirmation Page: Upon successfully booking a table, users are redirected to a confirmation page confirming their reservation details. 
 
 Navigation: The app features a navigation menu that allows users to easily explore different sections of the website, such as the about section, menu, reservation page, and contact information.
