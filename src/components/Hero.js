@@ -11,28 +11,24 @@ function Hero() {
 
   return (
     <section className="hero">
-      <div>
-        <div>
-          {" "}
+      <>
+        <div className="content-container">
           <h1>Little Lemon</h1>
-          <h2>Chicago</h2>
-        </div>
-        <div className="flex-container">
-          {" "}
+          <h2>Chicago</h2>{" "}
           <p>
             We are a family-owned Mediterranean restaurant, located on Maldove
             Street in Chicaco, Illinois. We focus on traditional recipes served
             with a modern twist.
           </p>
-          <div className="image-container">
-            <img
-              src={heroImage}
-              alt="Close-up of food at Little Lemon, showcasing the restaurant's Mediterranean cuisine."
-            />
-          </div>
+          <button onClick={handleBooking}>Reserve a table</button>
         </div>
-        <button onClick={handleBooking}>Reserve a table</button>
-      </div>
+        <div className="image-container">
+          <img
+            src={heroImage}
+            alt="Close-up of food at Little Lemon, showcasing the restaurant's Mediterranean cuisine."
+          />
+        </div>
+      </>
     </section>
   );
 }
