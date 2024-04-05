@@ -1,4 +1,4 @@
-# Your App Name
+![image](https://github.com/Gosia-Ras/little-lemon-restaurant/assets/83348386/c0764e01-b6aa-4fc9-a87f-d9a955b32a85)# Your App Name
 
 ## Description
 
@@ -45,7 +45,7 @@ This restaurant web application aims to provide a seamless and enjoyable experie
 - CSS
 
 ## Screenshots
-![Little Lemon Homepage](https://raw.githubusercontent.com/Gosia-Ras/little-lemon-restaurant/main/src/assets/homepage.png)
+![Little Lemon Homepage](https://raw.githubusercontent.com/Gosia-Ras/little-lemon-restaurant/main/src/assets/homepag-new.png)
+)
 
-![Booking Page](https://raw.githubusercontent.com/Gosia-Ras/little-lemon-restaurant/main/src/assets/booking.png)
 
