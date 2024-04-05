@@ -9,6 +9,7 @@ section.hero {
 section.hero .image-container {
   position: relative;
   top: 100px;
+  display: block;
 }
 
 section.hero .image-container img {

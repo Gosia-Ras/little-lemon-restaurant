@@ -170,17 +170,6 @@ section.booking .custom-radio input:checked ~ .checkmark:after {
   color: white;
 }
 
-section.booking .image-container {
-  margin-top: 30px;
-}
-
-section.booking .image-container img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 25px;
-}
-
 @media (max-width: 767px) {
   section.booking .custom-radio-container {
     grid-template-columns: repeat(2, 1fr);

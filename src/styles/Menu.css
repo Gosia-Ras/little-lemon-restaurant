@@ -1,4 +1,4 @@
-section.menu ul {
+section.menu ul.dish-types {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -6,7 +6,7 @@ section.menu ul {
   padding-inline-start: 0;
 }
 
-section.menu ul li {
+section.menu ul.dish-types li {
   background-color: var(--grey);
   color: var(--green-main);
   padding: 10px 12px;
@@ -17,7 +17,7 @@ section.menu ul li {
   transition: all 300ms ease-in-out;
 }
 
-section.menu ul li:hover {
+section.menu ul.dish-types li:hover {
   background-color: var(--green-main);
   color: var(--grey);
   cursor: pointer;
@@ -28,6 +28,7 @@ section.menu .dishes {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px;
   padding: 30px 0;
+  list-style: none;
 }
 
 section.menu .dishes .dish {
@@ -43,9 +44,7 @@ section.menu .dishes .dish .dish-container {
   border-radius: 0 0 25px 25px;
   flex-grow: 1;
   order: 2;
-}
 
-section.menu .dishes .dish .dish-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -61,6 +60,7 @@ section.menu .dishes .dish .image-container {
   order: 1;
   position: relative;
   top: 15px;
+  display: block;
   max-height: 300px;
 }
 
@@ -69,6 +69,7 @@ section.menu .dishes .dish img {
   height: 300px;
   object-fit: cover;
   border-radius: 25px 25px 0 0;
+  box-shadow: none;
 }
 
 /* Adjustments for screens less than 992px */
@@ -94,7 +95,7 @@ section.menu .dishes .dish img {
 }
 
 @media (max-width: 767px) {
-  section.menu ul {
+  section.menu ul.dish-types {
     flex-wrap: wrap;
   }
 
