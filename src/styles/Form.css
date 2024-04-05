@@ -4,6 +4,12 @@
 }
 
 /* Form Base Styles */
+
+section.booking form .row {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
 section.customer-details form {
   display: block;
 }
@@ -12,6 +18,8 @@ form .form-group {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   align-items: center;
+  width: 100%;
+  grid-column-gap: 30px;
 }
 
 form label {
