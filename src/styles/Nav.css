@@ -12,7 +12,16 @@ header ul {
   width: 100%;
 }
 
-header ul li a:hover {
+header nav ul li button {
+  font-family: Karla;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+header ul li a:hover,
+header nav ul li button:hover {
   color: var(--green-main);
 }
 

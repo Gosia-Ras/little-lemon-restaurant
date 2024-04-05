@@ -38,7 +38,17 @@ footer ul li > * {
   font-weight: 600;
 }
 
-footer a:hover {
+footer nav ul li button {
+  font-family: Karla;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  padding: 0;
+}
+
+footer a:hover,
+footer nav ul li button:hover {
   color: var(--yellow);
 }
 
