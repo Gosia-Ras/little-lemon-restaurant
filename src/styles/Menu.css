@@ -79,18 +79,16 @@ section.menu .dishes .dish img {
   }
 
   section.menu .dishes .dish img {
-    width: 100px;
-    height: 100px;
     object-fit: cover;
   }
   section.menu .dishes .dish .image-container {
-    flex: 0 0 100px;
-    order: 2;
+    flex: 0 0 300px;
   }
 
   section.menu .dishes .dish .dish-container {
     flex-grow: 1;
-    order: 1;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -103,19 +101,23 @@ section.menu .dishes .dish img {
     grid-template-columns: repeat(1, 1fr);
     grid-column-gap: 0;
     grid-row-gap: 15px;
-    border-top: 2px solid var(--grey);
   }
 
   section.menu .dishes .dish {
-    border-bottom: 1px solid var(--grey);
     flex-direction: row;
+    padding: 15px 0;
+  }
+
+  section.menu .dishes .dish img {
+    height: 300px;
+    border-radius: 25px 0 0 25px;
   }
 
   section.menu .dishes .dish .image-container {
-    flex: 0 0 100px;
+    top: 0;
   }
 
-  section.menu .dishes .dish > div {
-    flex-grow: 1;
+  section.menu .dishes .dish .dish-container {
+    border-radius: 0 25px 25px 0;
   }
 }
