@@ -43,9 +43,9 @@ function Menu() {
           .filter((dish) => selectedType === null || dish.type === selectedType)
           .map((dish) => (
             <div key={dish.id} data-type={dish.type} className="dish">
-              <div>
+              <div className="dish-container">
+                {" "}
                 <h4>{dish.name}</h4>
-                <p className="description">{dish.description}</p>
                 <p className="price">${dish.price}</p>
               </div>
               <div className="image-container">

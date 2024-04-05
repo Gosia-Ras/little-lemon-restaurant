@@ -17,22 +17,6 @@
             "photo": "https://plus.unsplash.com/premium_photo-1677619680472-3130a97bd5d3?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
-            "id": 3,
-            "name": "Chicken Alfredo Pasta",
-            "price": 15.99,
-            "description": "Tender chicken breast served over a bed of fettuccine pasta with creamy Alfredo sauce.",
-            "type": "main",
-            "photo": "https://images.unsplash.com/photo-1673081849580-2d36a09c8a6f?q=80&w=3425&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            "id": 4,
-            "name": "Tiramisu",
-            "price": 8.99,
-            "description": "A classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese.",
-            "type": "dessert",
-            "photo": "https://plus.unsplash.com/premium_photo-1695028378225-97fbe39df62a?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
             "id": 5,
             "name": "Mushroom Risotto",
             "price": 14.99,
@@ -47,22 +31,6 @@
             "description": "Crisp romaine lettuce tossed with Caesar dressing, croutons, and Parmesan cheese.",
             "type": "appetizer",
             "photo": "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            "id": 7,
-            "name": "Beef Tenderloin Steak",
-            "price": 24.99,
-            "description": "Juicy beef tenderloin steak cooked to your liking, served with mashed potatoes and asparagus.",
-            "type": "main",
-            "photo": "https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            "id": 8,
-            "name": "Chocolate Lava Cake",
-            "price": 9.99,
-            "description": "Warm chocolate cake with a gooey chocolate center, served with vanilla ice cream.",
-            "type": "dessert",
-            "photo": "https://images.unsplash.com/photo-1511911063855-2bf39afa5b2e?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "id": 9,
@@ -87,14 +55,6 @@
             "description": "A refreshing salad with mixed greens, tomatoes, cucumbers, olives, feta cheese, and Greek dressing.",
             "type": "appetizer",
             "photo": "https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            "id": 12,
-            "name": "Vegetable Spring Rolls",
-            "price": 6.99,
-            "description": "Crispy spring rolls filled with mixed vegetables, served with sweet chili dipping sauce.",
-            "type": "appetizer",
-            "photo": "https://images.unsplash.com/photo-1600850056064-a8b380df8395?q=80&w=2912&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "id": 13,
