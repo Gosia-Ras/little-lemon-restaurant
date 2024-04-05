@@ -1,6 +1,6 @@
-import Main from "./components/Main";
-import Header from "./components/Header";
-import "./styles/ConfirmationPage.css";
+import Main from "../Main";
+import Header from "../Header";
+import "../../styles/ConfirmationPage.css";
 
 function ConfirmationPage() {
   return (

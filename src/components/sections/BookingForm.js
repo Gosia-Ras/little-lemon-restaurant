@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import fakeAPI from "../bookingApi";
-import "../styles/BookingForm.css";
-import bruschetta from "../assets/bruschetta.jpg";
+import fakeAPI from "../../bookingApi";
+import "../../styles/BookingForm.css";
 
 function BookingForm({ state, dispatch }) {
   const { availableTimes, closureMessage } = state;
@@ -157,9 +156,6 @@ function BookingForm({ state, dispatch }) {
 
         <input type="submit" className="submit" value="Reserve" />
       </form>
-      <div className="image-container">
-        <img src={bruschetta} alt="bruschetta" />
-      </div>
     </section>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import heroImage from "../assets/restauranfood.jpg";
-import "../styles/Hero.css";
+import heroImage from "../../assets/restauranfood.jpg";
+import "../../styles/Hero.css";
 function Hero() {
   const navigate = useNavigate();
 

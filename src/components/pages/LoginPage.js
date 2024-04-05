@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Main from "./components/Main";
-import "./styles/SignUpPage.css";
+import Main from "../Main";
+import "../../styles/SignUpPage.css";
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ function LoginPage() {
 
   return (
     <Main>
-      <section className="reservation"  aria-labelledby="login-heading">
+      <section className="reservation" aria-labelledby="login-heading">
         <button className="button-back" onClick={handleBack}>
           <svg
             width="40"

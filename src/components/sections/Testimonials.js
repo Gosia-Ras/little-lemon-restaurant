@@ -1,5 +1,5 @@
-import "../styles/Testimonials.css";
-import data from "../testimonialsData.json";
+import "../../styles/Testimonials.css";
+import data from "../../testimonialsData.json";
 
 function Testimonials() {
   return (

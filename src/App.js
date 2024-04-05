@@ -1,10 +1,10 @@
 import "./styles/index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./Homepage";
-import BookingPage from "./BookingPage";
-import SignUpPage from "./SignUpPage";
-import ConfirmationPage from "./ConfirmationPage";
-import LoginPage from "./LoginPage";
+import BookingPage from "./components/pages/BookingPage";
+import SignUpPage from "./components/pages/SignUpPage";
+import ConfirmationPage from "./components/pages/ConfirmationPage";
+import LoginPage from "./components/pages/LoginPage";
 
 function App() {
   return (

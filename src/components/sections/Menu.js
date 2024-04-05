@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import data from "../dishesData.json";
-import "../styles/Menu.css";
+import data from "../../dishesData.json";
+import "../../styles/Menu.css";
 
 function Menu() {
   const [selectedType, setSelectedType] = useState(null);
@@ -17,7 +17,7 @@ function Menu() {
   return (
     <section className="menu" id="menu">
       <h3>Our Menu</h3>
-      <ul>
+      <ul className="dish-types">
         <li
           onClick={handleShowAll}
           tabIndex="0"
@@ -38,11 +38,11 @@ function Menu() {
           </li>
         ))}
       </ul>
-      <div className="dishes">
+      <ul className="dishes">
         {data.dishes
           .filter((dish) => selectedType === null || dish.type === selectedType)
           .map((dish) => (
-            <div key={dish.id} data-type={dish.type} className="dish">
+            <li key={dish.id} data-type={dish.type} className="dish">
               <div className="dish-container">
                 {" "}
                 <h4>{dish.name}</h4>
@@ -51,9 +51,9 @@ function Menu() {
               <div className="image-container">
                 <img src={dish.photo} alt={dish.name} />
               </div>
-            </div>
+            </li>
           ))}
-      </div>
+      </ul>
     </section>
   );
 }

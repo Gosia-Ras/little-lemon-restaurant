@@ -1,5 +1,5 @@
-import aboutPhoto from "../assets/Mario and Adrian A.jpg";
-import "../styles/About.css";
+import aboutPhoto from "../../assets/Mario and Adrian A.jpg";
+import "../../styles/About.css";
 
 function AboutUs() {
   return (

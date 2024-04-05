@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Main from "./components/Main";
-import "./styles/SignUpPage.css";
+import Main from "../Main";
+import "../../styles/SignUpPage.css";
 
 function SignUpPage() {
   const navigate = useNavigate();
