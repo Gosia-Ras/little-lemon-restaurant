@@ -1,14 +1,22 @@
-section.image-container {
+section.image-grid {
   margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
+  background-color: var(--grey);
 }
 
-section.image-container img {
+section.image-grid img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 25px;
   box-shadow: 1px 1px 8px var(--green-main);
+}
+
+@media (max-width: 767px) {
+  section.image-grid {
+    grid-template-columns: auto;
+    grid-row-gap: 30px;
+  }
 }

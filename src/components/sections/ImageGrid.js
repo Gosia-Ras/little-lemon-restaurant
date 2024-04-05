@@ -5,7 +5,7 @@ import chef from "../../assets/Mario and Adrian b.jpg";
 
 function ImageGrid() {
   return (
-    <section className="image-container">
+    <section className="image-grid">
       <img src={bruschetta} alt="bruschetta" />
       <img src={chef} alt="bruschetta" />
       <img src={restaurant} alt="bruschetta" />
