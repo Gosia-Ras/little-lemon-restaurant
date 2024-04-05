@@ -1,4 +1,4 @@
-# Your App Name
+![image](https://github.com/Gosia-Ras/little-lemon-restaurant/assets/83348386/c0764e01-b6aa-4fc9-a87f-d9a955b32a85)# Your App Name
 
 ## Description
 
@@ -9,8 +9,6 @@ Key features of the app include:
 Homepage: Introduction to the restaurant and its' cuisine.
 
 Booking Page: Users can book a table at the restaurant through the booking page. 
-
-Sign-Up and Login Pages: To streamline the reservation process, the app includes sign-up and login pages for users. New visitors can create an account to manage their reservations and preferences, while existing users can log in to access their accounts.
 
 Confirmation Page: Upon successfully booking a table, users are redirected to a confirmation page confirming their reservation details. 
 
@@ -45,7 +43,7 @@ This restaurant web application aims to provide a seamless and enjoyable experie
 - CSS
 
 ## Screenshots
-![Little Lemon Homepage](https://raw.githubusercontent.com/Gosia-Ras/little-lemon-restaurant/main/src/assets/homepage.png)
+![Little Lemon Homepage](https://raw.githubusercontent.com/Gosia-Ras/little-lemon-restaurant/main/src/assets/homepag-new.png)
+)
 
-![Booking Page](https://raw.githubusercontent.com/Gosia-Ras/little-lemon-restaurant/main/src/assets/booking.png)
 
